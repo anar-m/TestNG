@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- eger birden fazla seçim yapmak istiyorsak
+hiyerarsiye uygun olmak şartıyla
+istediğimiz kadar kırılım yapabiliriz
+-->
+<suite name="istenen methodlari calistirma">
+    <test name="e2e test">
+
+        <classes>
+            <class name="tests.day16_testNG_framework.C05_QualityNegatifLoginTesti">
+                <methods>
+                    <include name="gecersizPasswordTest"></include>
+                    <include name="gecersizEmailTesti"></include>
+                    </methods>
+            </class>
+            <class name="tests.day15_testNGFrameWork.C01_Priority">
+                <methods>
+                    <exclude name="carpmaTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

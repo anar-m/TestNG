@@ -18,7 +18,7 @@ public class C05_QualityNegatifLoginTesti {
     //5- Basarili olarak giris yapilamadigini test edin
 
     QualitydemyPage qualitydemyPage;
-    @Test
+    @Test(groups = {"smoke","regression"})
     public void gecersizPasswordTesti(){
 
         Driver.getDriver().get("https://www.qualitydemy.com/");
@@ -37,7 +37,7 @@ public class C05_QualityNegatifLoginTesti {
     }
 
 
-    @Test
+    @Test (groups = {"smoke","e2e1"})
     public void gecersizEmailTesti(){
 
         Driver.getDriver().get("https://www.qualitydemy.com/");
@@ -54,7 +54,7 @@ public class C05_QualityNegatifLoginTesti {
 
     }
 
-    @Test
+    @Test(groups = {"smoke","regression"})
     public void gecersizEmailPasswordTesti(){
 
         Driver.getDriver().get("https://www.qualitydemy.com/ ");

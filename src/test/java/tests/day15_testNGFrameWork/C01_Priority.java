@@ -13,7 +13,7 @@ public class C01_Priority {
         Assert.assertTrue(a*b>100);
 
     }
-    @Test
+    @Test(groups = {"smoke","e2e1","regression"})
     public void toplamaTesti(){
         // sayilarin toplaminin pozitif bir sayi oldugunu test edin
         Assert.assertTrue((a+b) > 0);

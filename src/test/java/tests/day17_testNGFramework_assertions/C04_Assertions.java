@@ -10,7 +10,7 @@ import utilities.Driver;
 
 public class C04_Assertions {
 
-    @Test
+    @Test (groups = {"smoke","e2e1","regression"})
     public void test01() {
 
         // amazon anasayfaya gidelim
