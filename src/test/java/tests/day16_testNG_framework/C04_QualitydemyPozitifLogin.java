@@ -14,7 +14,9 @@ public class C04_QualitydemyPozitifLogin {
         Driver.getDriver().get("https://www.qualitydemy.com/");
         //2- login linkine basin
         QualitydemyPage qualitydemyPage = new QualitydemyPage();
+        qualitydemyPage.cookiesAcceptElementi.click();
         qualitydemyPage.ilkLoginLinki.click();
+
         //3- Kullanici email'i olarak valid email girin
         qualitydemyPage.emailKutusu.sendKeys("anevzatcelik@gmail.com");
         //4- Kullanici sifresi olarak valid sifre girin

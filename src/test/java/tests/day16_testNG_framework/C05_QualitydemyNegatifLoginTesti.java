@@ -6,7 +6,7 @@ import pages.QualitydemyPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class C05_QualityNegatifLoginTesti {
+public class C05_QualitydemyNegatifLoginTesti {
 
     // 1- https://www.qualitydemy.com/ anasayfasina gidin
     //2- login linkine basin
@@ -24,6 +24,7 @@ public class C05_QualityNegatifLoginTesti {
         Driver.getDriver().get("https://www.qualitydemy.com/");
 
         qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage.cookiesAcceptElementi.click();
         qualitydemyPage.ilkLoginLinki.click();
 
         qualitydemyPage.emailKutusu.sendKeys("anevzatcelik@gmail.com");
@@ -43,6 +44,7 @@ public class C05_QualityNegatifLoginTesti {
         Driver.getDriver().get("https://www.qualitydemy.com/");
 
         qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage.cookiesAcceptElementi.click();
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("Nevzat152032");
@@ -60,6 +62,7 @@ public class C05_QualityNegatifLoginTesti {
         Driver.getDriver().get("https://www.qualitydemy.com/ ");
 
         qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage.cookiesAcceptElementi.click();
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("12345");

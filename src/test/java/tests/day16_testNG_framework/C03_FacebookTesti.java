@@ -33,7 +33,6 @@ public class C03_FacebookTesti {
         Assert.assertTrue(facebookPage.girisYapilamadiYaziElementi.isDisplayed());
         ReusableMethods.tumSayfaFotografCek("Facebook");
 
-
         Driver.closeDriver();
 
     }

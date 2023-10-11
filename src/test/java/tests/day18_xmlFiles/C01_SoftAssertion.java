@@ -7,14 +7,16 @@ import org.testng.asserts.SoftAssert;
 import pages.ZeroAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class C01_SoftAssertion {
+
     @Test
-    public void zeroAppTesti() {
+    public void zeroAppTesti(){
         //. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get(ConfigReader.getProperty("zeroAppUrl"));
 
@@ -24,21 +26,18 @@ public class C01_SoftAssertion {
 
         // 3. Login kutusuna “username” yazin
         zeroAppPage.loginKutusu.sendKeys(ConfigReader.getProperty("zeroUsername"));
-
         // 4. Password kutusuna “password” yazin
         zeroAppPage.passwordKutusu.sendKeys(ConfigReader.getProperty("zeroPassword"));
 
         // 5. Sign in tusuna basin
         zeroAppPage.signInButonu.click();
 
-        // 6. Online banking menusu icinde Pay Bills sayfasina gidin
+        // 6. back tusuna basin, Online banking menusu icinde Pay Bills sayfasina gidin
         Driver.getDriver().navigate().back();
         zeroAppPage.onlineBankingLinki.click();
         zeroAppPage.payBillsLinki.click();
-
         // 7. “Purchase Foreign Currency” tusuna basin
         zeroAppPage.purchaseFCurrencyElementi.click();
-
         // 8. “Currency” drop down menusunden Eurozone’u secin
         Select select = new Select(zeroAppPage.pcCurrencyDropdown);
         select.selectByValue("EUR");
