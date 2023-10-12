@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Raporlu dosyalar">
+    
+    <test name="Rapor için hazırlanan classlar">
+        
+        <packages>
+            <package name="tests.day19_testNGreports_crossBrowserTest"></package>
+        </packages>
+    </test>
+</suite>
